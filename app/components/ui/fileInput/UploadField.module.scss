@@ -1,0 +1,34 @@
+.fileInput {
+	@apply relative;
+	.uploadFlex {
+		@apply flex;
+
+		> .uploadImageContainer {
+			@apply shrink-0 relative w-24 h-24;
+
+			img {
+				@apply image-like-bg rounded-md;
+			}
+		}
+
+		> .field {
+			@apply block mr-6;
+
+			> label {
+				@apply block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300;
+			}
+
+			> input {
+				@apply block w-full text-sm text-gray-900 file:text-white file:py-2 file:px-4 file:outline-none
+				 file:border-none bg-gray-50 file:bg-gray-900 rounded-lg 
+				border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none
+				 dark:bg-gray-700 dark:file:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400;
+			}
+			
+			.error {
+				@apply text-sm w-full text-rose-700 mt-1;
+			}
+
+		}
+	}
+}

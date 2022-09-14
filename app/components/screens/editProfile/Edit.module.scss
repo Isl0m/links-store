@@ -1,0 +1,15 @@
+.wrapper {
+  @apply container w-fit h-full mx-auto my-8;
+}
+
+.form {
+  @apply mb-8;
+
+  .title {
+    @apply text-2xl font-bold text-gray-900 dark:text-white mb-4;
+  }
+
+  .fields {
+    @apply grid grid-cols-3 gap-8;
+  }
+}

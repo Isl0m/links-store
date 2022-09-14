@@ -1,0 +1,14 @@
+.selectContainer {
+	@apply relative mb-8;
+
+	> label {
+		@apply block;
+
+		> span {
+			@apply block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300;
+		}
+	}
+}
+.error {
+	@apply absolute -bottom-6 left-0 text-sm w-full text-pink-700;
+}
