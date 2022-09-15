@@ -7,20 +7,19 @@ import { ProfileService } from '@/services/profile.service'
 import { toastError } from '@/utils/toast-error'
 
 export const useProfile = () => {
-	const {
-		data: profile,
-		isSuccess,
-		isLoading,
-	} = useQuery(['profile', 'get'], () => ProfileService.getByUser(), {
-		select: ({ data }) => data,
-		onError(error) {
-			toastError(error, 'Get Profile')
-		},
-	})
+	const { data: profile, isLoading } = useQuery(
+		['profile', 'get'],
+		() => ProfileService.getByUser(),
+		{
+			select: ({ data }) => data,
+			onError(error) {
+				toastError(error, 'Get Profile')
+			},
+		}
+	)
 
-	return { profile, isSuccess, isLoading } as {
+	return { profile, isLoading } as {
 		profile: IProfile
-		isSuccess: boolean
 		isLoading: boolean
 	}
 }

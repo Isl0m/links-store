@@ -76,7 +76,7 @@ const LinkForm: FC<EditFieldWithControl<ILink>> = ({
 							field={field}
 							label="Portfolio"
 							placeholder="Enter links for portfolio"
-							isLoading={Boolean(!field.value)}
+							isLoading={false}
 						/>
 					)}
 				/>
@@ -92,7 +92,7 @@ const LinkForm: FC<EditFieldWithControl<ILink>> = ({
 							error={error}
 							field={field}
 							label="Social Links"
-							isLoading={Boolean(!field.value)}
+							isLoading={false}
 						/>
 					)}
 				/>

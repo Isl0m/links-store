@@ -1,0 +1,44 @@
+.profileContainer {
+	@apply container my-8 w-2/3 h-full mx-auto;
+	.mainInfo {
+		@apply flex  gap-8;
+		min-width: 50%;
+	}
+}
+
+.banner {
+	@apply relative overflow-hidden w-full h-44 rounded-t-lg;
+}
+.controls {
+	@apply flex justify-between mt-2 mx-12;
+	.avatarAndInfo {
+		@apply flex items-center;
+		.avatar {
+			@apply relative overflow-hidden -mt-16 w-32 h-32 rounded-full border-4 border-white;
+		}
+		.info {
+			@apply ml-2;
+			.title {
+				@apply font-bold text-xl;
+			}
+			.subtitle {
+				@apply text-gray-400;
+			}
+		}
+	}
+}
+
+.noDetails {
+	@apply flex items-center justify-center h-40 my-4 p-6 bg-white rounded-lg 
+  border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700;
+}
+
+.social,
+.portfolio {
+	.title {
+		@apply block text-gray-900 dark:text-white text-center mb-2;
+	}
+	.links {
+		@apply flex justify-center gap-2;
+	}
+}

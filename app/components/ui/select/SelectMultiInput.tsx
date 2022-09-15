@@ -1,5 +1,5 @@
 import { FC, KeyboardEventHandler, useEffect, useState } from 'react'
-import { ActionMeta, OnChangeValue } from 'react-select'
+import { OnChangeValue } from 'react-select'
 import makeAnimated from 'react-select/animated'
 import CreatableSelect from 'react-select/creatable'
 
@@ -38,13 +38,15 @@ const SelectMultiInput: FC<ISelectInput> = ({
 		switch (event.key) {
 			case 'Enter':
 			case 'Tab':
-				const newValue = createOption(inputValue)
+				const newValue = value
+					? [createOption(inputValue), ...value]
+					: [createOption(inputValue)]
 				const fieldValue = field.value
 					? [inputValue, ...field.value]
 					: [inputValue]
 				field.onChange(fieldValue)
 				//@ts-ignore
-				setValue([newValue, ...value])
+				setValue(newValue)
 				setInputValue('')
 				event.preventDefault()
 		}

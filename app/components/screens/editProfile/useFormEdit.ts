@@ -1,7 +1,6 @@
 import { useMutation, useQuery } from '@tanstack/react-query'
 import { mapKeys } from 'lodash'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
 import { SubmitHandler, UseFormSetValue } from 'react-hook-form'
 import { toast } from 'react-toastify'
 
@@ -15,15 +14,13 @@ import { EditProfile } from './edit.forms.interface'
 
 export const useFormEdit = (setValue: UseFormSetValue<EditProfile>) => {
 	const { user } = useAuth()
-	const [isLoading, setIsLoading] = useState<boolean>(false)
-	const { back } = useRouter()
-	const profileRes = useQuery(
+	const { push } = useRouter()
+	const { isLoading } = useQuery(
 		['profile', 'edit', 'get'],
 		() => ProfileService.getByUser(),
 		{
 			select: ({ data }) => data,
 			onSuccess: profile => {
-				setIsLoading(true)
 				user && setValue('user.email', user?.email)
 
 				setValue('profile.name', profile.name)
@@ -39,7 +36,6 @@ export const useFormEdit = (setValue: UseFormSetValue<EditProfile>) => {
 					//@ts-ignore
 					setValue(`link.${key}`, value)
 				})
-				setIsLoading(false)
 			},
 			onError(error) {
 				toastError(error, 'Get Profile')
@@ -56,7 +52,7 @@ export const useFormEdit = (setValue: UseFormSetValue<EditProfile>) => {
 			},
 			onSuccess() {
 				toast.success('Update profile')
-				back()
+				push('/profile')
 			},
 		}
 	)

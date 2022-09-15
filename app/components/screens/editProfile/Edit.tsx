@@ -1,8 +1,9 @@
 import { DevTool } from '@hookform/devtools'
-import { FC, useEffect } from 'react'
-import { SubmitHandler, useForm } from 'react-hook-form'
+import { FC } from 'react'
+import { useForm } from 'react-hook-form'
 
 import Button from '@/ui/button/Button'
+import SkeletonEdit from '@/ui/skeleton/SkeletonEdit'
 
 import s from './Edit.module.scss'
 import { EditProfile } from './edit.forms.interface'
@@ -25,7 +26,7 @@ const Edit: FC = () => {
 
 	const { isLoading, onSubmit } = useFormEdit(setValue)
 
-	if (isLoading) return <h1>Loading...</h1>
+	if (isLoading) return <SkeletonEdit />
 
 	return (
 		<>

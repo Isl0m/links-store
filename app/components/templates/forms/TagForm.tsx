@@ -28,7 +28,7 @@ const DetailForm: FC<EditFieldWithControl<ITag>> = ({ register, control }) => {
 							field={field}
 							placeholder="Tags"
 							defaultOptions={['IT', 'Sport']}
-							isLoading={Boolean(!field.value)}
+							isLoading={false}
 						/>
 					)}
 				/>

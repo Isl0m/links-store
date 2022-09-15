@@ -1,5 +1,7 @@
 import { FC, useState } from 'react'
 
+import Meta from '@/utils/meta/Meta'
+
 import { useAuthRedirect } from './useAuthRedirect'
 import Login from '@/templates/auth/Login'
 import Register from '@/templates/auth/Register/Register'
@@ -16,10 +18,14 @@ const Auth: FC = () => {
 		}
 	}
 
-	return authType === 'login' ? (
-		<Login toggleAuthType={toggleAuthType} />
-	) : (
-		<Register toggleAuthType={toggleAuthType} />
+	return (
+		<Meta title="Auth">
+			{authType === 'login' ? (
+				<Login toggleAuthType={toggleAuthType} />
+			) : (
+				<Register toggleAuthType={toggleAuthType} />
+			)}
+		</Meta>
 	)
 }
 

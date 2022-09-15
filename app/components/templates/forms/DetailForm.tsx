@@ -57,7 +57,7 @@ const DetailForm: FC<EditFieldWithControl<IDetail>> = ({
 							label="Gender"
 							placeholder="Please choose gender"
 							defaultOptions={options}
-							isLoading={Boolean(!field.value)}
+							isLoading={false}
 						/>
 					)}
 				/>
@@ -75,7 +75,7 @@ const DetailForm: FC<EditFieldWithControl<IDetail>> = ({
 							label="Country"
 							placeholder="Please choose country"
 							defaultOptions={countries}
-							isLoading={Boolean(!field.value)}
+							isLoading={false}
 						/>
 					)}
 				/>

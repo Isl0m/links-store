@@ -1,9 +1,16 @@
 import { FC } from 'react'
 
-import Select from '@/ui/select/Select'
+import Meta from '@/utils/meta/Meta'
 
 const Home: FC = () => {
-	return <div className="text-2xl text-gray-200">Home</div>
+	return (
+		<Meta
+			title="Home"
+			description="Links Store is a platform where you can save information about you self"
+		>
+			<div className="text-2xl text-gray-900 dark:text-gray-200">Home</div>
+		</Meta>
+	)
 }
 
 export default Home

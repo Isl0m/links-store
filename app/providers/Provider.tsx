@@ -1,5 +1,4 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { ThemeProvider } from 'next-themes'
 import { FC, PropsWithChildren } from 'react'
 import { Provider } from 'react-redux'
 import { ToastContainer } from 'react-toastify'
@@ -11,6 +10,7 @@ import { TypeComponentAuthFields } from '@/shared/types/auth.types'
 import { store } from '@/store/store'
 
 import AuthProvider from './AuthProvider/AuthProvider'
+import HeadProvider from './HeadProvider/HeadProvider'
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -23,6 +23,7 @@ const queryClient = new QueryClient({
 const MainProvider: FC<TypeComponentAuthFields> = ({ children, Component }) => {
 	return (
 		<>
+		<HeadProvider>
 			<Provider store={store}>
 				<QueryClientProvider client={queryClient}>
 					<ToastContainer
@@ -37,13 +38,12 @@ const MainProvider: FC<TypeComponentAuthFields> = ({ children, Component }) => {
 						pauseOnHover
 					/>
 					<AuthProvider Component={Component}>
-						<ThemeProvider attribute="class">
 							<Layout />
 							{children}
-						</ThemeProvider>
 					</AuthProvider>
 				</QueryClientProvider>
 			</Provider>
+			</HeadProvider>
 		</>
 	)
 }

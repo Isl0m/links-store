@@ -1,0 +1,19 @@
+.wrapper {
+	@apply container w-full h-full mx-auto my-8 animate-pulse;
+	.form {
+		.title {
+			@apply w-48 h-8 mb-4 bg-gray-200 rounded-2xl dark:bg-gray-700;
+		}
+		.fields {
+			@apply grid grid-cols-3 gap-8;
+			.field {
+				.input {
+					@apply mb-2 w-96 h-11 bg-gray-200 rounded-lg dark:bg-gray-700;
+				}
+				.label {
+					@apply mb-2 w-24 h-5 bg-gray-200 rounded-2xl dark:bg-gray-700;
+				}
+			}
+		}
+	}
+}

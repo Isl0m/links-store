@@ -4,6 +4,7 @@ import { FC } from 'react'
 import s from './UploadField.module.scss'
 import { IFileInput } from './file-input.interface'
 import { useUpload } from './useUpload'
+import SkeletonImage from '../skeleton/SkeletonImage'
 
 const FileInput: FC<IFileInput> = ({
 	folder,
@@ -23,7 +24,7 @@ const FileInput: FC<IFileInput> = ({
 				</div>
 				<div className={s.uploadImageContainer}>
 					{isLoading ? (
-						<h5>Loading ...</h5>
+						<SkeletonImage />
 					) : (
 						file && <Image src={file} alt="" layout="fill" unoptimized />
 					)}
