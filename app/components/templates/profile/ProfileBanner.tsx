@@ -2,13 +2,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 
+import s from '@/screens/profile/Profile.module.scss'
+
 import Button from '@/ui/button/Button'
+import ClipboardCopy from '@/ui/copy-to-clipboard/ClipboardCopy'
 
 import { ILink } from '@/shared/types/profile.types'
 
-import s from './Profile.module.scss'
+import { copyProfileUrl } from '@/configs/url.config'
 
 interface IProfileBannerProps {
+	_id: string
 	link: ILink
 	name: string
 	surname?: string
@@ -17,6 +21,7 @@ interface IProfileBannerProps {
 }
 
 const ProfileBanner: FC<IProfileBannerProps> = ({
+	_id,
 	link,
 	name,
 	surname,
@@ -46,9 +51,9 @@ const ProfileBanner: FC<IProfileBannerProps> = ({
 						/>
 					</div>
 					<div className={s.info}>
-						<div className={s.title}>
+						<h2>
 							{name} {surname}
-						</div>
+						</h2>
 						<div className={s.subtitle}>{profession}</div>
 					</div>
 				</div>
@@ -60,9 +65,10 @@ const ProfileBanner: FC<IProfileBannerProps> = ({
 							</Button>
 						</a>
 					)}
+					<ClipboardCopy copyText={copyProfileUrl(_id)} />
 					{isUser && (
 						<Link href="/profile/edit">
-							<Button icon="edit" className="mt-2 ml-2">
+							<Button icon="edit" className="mt-2">
 								<a>Edit Profile</a>
 							</Button>
 						</Link>

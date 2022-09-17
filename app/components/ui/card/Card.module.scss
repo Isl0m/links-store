@@ -1,11 +1,7 @@
 .card {
 	@apply block p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700;
 
-	.title {
-		@apply mb-2 text-2xl font-bold tracking-tight text-gray-800 dark:text-white;
-	}
-
 	.description {
-		@apply font-normal text-gray-700 dark:text-gray-400;
+		@apply font-normal text-gray-700 dark:text-gray-400 mt-2;
 	}
 }

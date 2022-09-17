@@ -15,12 +15,12 @@ const Layout: FC = () => {
 				<a className="flex items-center">
 					<Image
 						src="/logo.svg"
-            width={48}
-            height={48}
+						width={48}
+						height={48}
 						className="mr-3 h-6 sm:h-9"
 						alt="Logo"
 					/>
-					<span className={s.title}>Links Store</span>
+					<h2 className={s.title}>Links Store</h2>
 				</a>
 				<div className="flex md:order-2">
 					<SearchField className="hidden relative md:block" />

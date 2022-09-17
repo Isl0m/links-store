@@ -1,9 +1,12 @@
-import { axiosClassic } from 'api/interceptors'
-import { IAuthResponse } from '@/store/user/user.interface'
-import { removeTokensFromStorage, saveToStorage } from './auth.helper'
-import Cookies from 'js-cookie'
 import { getContentType } from 'api/api.helpers'
-import { getAuthUrl } from '@/configs/api.config'
+import { axiosClassic } from 'api/interceptors'
+import Cookies from 'js-cookie'
+
+import { getAuthApi } from '@/configs/api.config'
+
+import { IAuthResponse } from '@/store/user/user.interface'
+
+import { removeTokensFromStorage, saveToStorage } from './auth.helper'
 
 export const AuthService = {
 	async register(
@@ -14,7 +17,7 @@ export const AuthService = {
 		surname?: string
 	) {
 		const res = await axiosClassic.post<IAuthResponse>(
-			getAuthUrl('/register'),
+			getAuthApi('/register'),
 			{ email, password, name, profession, surname }
 		)
 
@@ -25,7 +28,7 @@ export const AuthService = {
 		return res
 	},
 	async login(email: string, password: string) {
-		const res = await axiosClassic.post<IAuthResponse>(getAuthUrl('/login'), {
+		const res = await axiosClassic.post<IAuthResponse>(getAuthApi('/login'), {
 			email,
 			password,
 		})
@@ -42,7 +45,7 @@ export const AuthService = {
 	async getNewTokens() {
 		const refreshToken = Cookies.get('refreshToken')
 		const res = await axiosClassic.post<IAuthResponse>(
-			getAuthUrl('/login/access-token'),
+			getAuthApi('/login/access-token'),
 			{ refreshToken },
 			{ headers: getContentType() }
 		)

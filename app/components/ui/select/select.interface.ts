@@ -1,5 +1,4 @@
 import { ControllerRenderProps } from 'react-hook-form'
-import { Options } from 'react-select'
 
 import { IFieldProps } from '@/shared/types/form.types'
 
@@ -10,7 +9,7 @@ export interface IOption {
 }
 
 export interface ISelect extends Partial<Omit<IFieldProps, 'options'>> {
-	defaultOptions: string[]
+	defaultOptions: string[] | undefined
 	field: ControllerRenderProps<any, any>
 	isLoading?: boolean
 	isCreatable?: boolean

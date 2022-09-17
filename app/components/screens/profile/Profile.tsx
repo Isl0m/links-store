@@ -3,14 +3,15 @@ import { FC } from 'react'
 
 import SkeletonProfile from '@/ui/skeleton/SkeletonProfile'
 
+import ProfileBanner from '@/templates/profile/ProfileBanner'
+import ProfileDetail from '@/templates/profile/ProfileDetail'
+import ProfileLinks from '@/templates/profile/ProfileLinks'
+
 import { IProfile } from '@/shared/types/profile.types'
 
 import Meta from '@/utils/meta/Meta'
 
 import s from './Profile.module.scss'
-import ProfileBanner from './ProfileBanner'
-import ProfileDetail from './ProfileDetail'
-import ProfileLinks from './ProfileLinks'
 
 const AdditionInfo = dynamic(() => import('@/ui/card/AdditionInfo'), {
 	ssr: false,
@@ -25,11 +26,12 @@ const Profile: FC<ProfileProps> = ({ profile, isUser = false }) => {
 	if (!profile) {
 		return <SkeletonProfile />
 	}
-	const { name, surname, profession, link, detail, tags } = profile
+	const { _id, name, surname, profession, link, detail, tags } = profile
 	return (
 		<Meta title="Profile">
 			<div className={s.profileContainer}>
 				<ProfileBanner
+					_id={_id}
 					link={link}
 					name={name}
 					surname={surname}

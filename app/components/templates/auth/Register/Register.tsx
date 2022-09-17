@@ -32,7 +32,7 @@ const Register: FC<IRegisterProps> = ({ toggleAuthType }) => {
 	return (
 		<div className={s.wrapper}>
 			<form className={s.form} onSubmit={handleSubmit(onSubmit)}>
-				<h5 className={s.title}>Create your account</h5>
+				<h1>Create your account</h1>
 
 				{isFirstStep ? (
 					<FirstStep register={register} errors={errors} />

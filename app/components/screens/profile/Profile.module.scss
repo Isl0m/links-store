@@ -1,7 +1,7 @@
 .profileContainer {
 	@apply container my-8 w-2/3 h-full mx-auto;
 	.mainInfo {
-		@apply flex  gap-8;
+		@apply flex gap-8;
 		min-width: 50%;
 	}
 }
@@ -10,7 +10,7 @@
 	@apply relative overflow-hidden w-full h-44 rounded-t-lg;
 }
 .controls {
-	@apply flex justify-between mt-2 mx-12;
+	@apply flex justify-between mt-2 mx-8;
 	.avatarAndInfo {
 		@apply flex items-center;
 		.avatar {
@@ -18,9 +18,7 @@
 		}
 		.info {
 			@apply ml-2;
-			.title {
-				@apply font-bold text-xl;
-			}
+
 			.subtitle {
 				@apply text-gray-400;
 			}
@@ -35,10 +33,7 @@
 
 .social,
 .portfolio {
-	.title {
-		@apply block text-gray-900 dark:text-white text-center mb-2;
-	}
 	.links {
-		@apply flex justify-center gap-2;
+		@apply flex justify-center gap-2 mt-2;
 	}
 }

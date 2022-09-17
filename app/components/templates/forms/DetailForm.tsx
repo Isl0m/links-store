@@ -29,7 +29,7 @@ const DetailForm: FC<EditFieldWithControl<IDetail>> = ({
 
 	return (
 		<div className={s.form}>
-			<h4 className={s.title}>Detail Edit Fields</h4>
+			<h1>Detail Edit Fields</h1>
 			<div className={s.fields}>
 				<Field
 					label="Age"

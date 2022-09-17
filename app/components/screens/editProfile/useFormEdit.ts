@@ -57,7 +57,6 @@ export const useFormEdit = (setValue: UseFormSetValue<EditProfile>) => {
 		}
 	)
 	const onSubmit: SubmitHandler<EditProfile> = async data => {
-		console.log(data)
 		await mutateAsync(data)
 	}
 

@@ -32,7 +32,7 @@ const Login: FC<ILoginProps> = ({ toggleAuthType }) => {
 	return (
 		<div className={s.wrapper}>
 			<form className={s.form} onSubmit={handleSubmit(onSubmit)}>
-				<h5 className={s.title}>Log in to your account</h5>
+				<h1>Log in to your account</h1>
 
 				<Field
 					label="Email Address"
