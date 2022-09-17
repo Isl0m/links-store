@@ -1,4 +1,4 @@
-import ProfileEdit from '@/screens/editProfile/Edit'
+import ProfileEdit from '@/screens/edit-profile/Edit'
 
 import { NextPageAuth } from '@/shared/types/auth.types'
 

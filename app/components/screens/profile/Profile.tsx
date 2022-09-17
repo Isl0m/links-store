@@ -19,14 +19,16 @@ const AdditionInfo = dynamic(() => import('@/ui/card/AdditionInfo'), {
 
 interface ProfileProps {
 	profile: IProfile
-	isUser: boolean
+	isUser?: boolean
 }
 
 const Profile: FC<ProfileProps> = ({ profile, isUser = false }) => {
 	if (!profile) {
 		return <SkeletonProfile />
 	}
+
 	const { _id, name, surname, profession, link, detail, tags } = profile
+
 	return (
 		<Meta title="Profile">
 			<div className={s.profileContainer}>

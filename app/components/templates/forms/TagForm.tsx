@@ -2,8 +2,8 @@ import dynamic from 'next/dynamic'
 import { FC, memo } from 'react'
 import { Controller } from 'react-hook-form'
 
-import s from '@/screens/editProfile/Edit.module.scss'
-import { EditFieldWithControl } from '@/screens/editProfile/edit.forms.interface'
+import s from '@/screens/edit-profile/Edit.module.scss'
+import { EditFieldWithControl } from '@/screens/edit-profile/edit.forms.interface'
 
 import { ITag } from '@/shared/types/profile.types'
 

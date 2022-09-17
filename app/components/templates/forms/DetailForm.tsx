@@ -3,8 +3,8 @@ import { FC, memo } from 'react'
 import { Controller } from 'react-hook-form'
 import { stripHtml } from 'string-strip-html'
 
-import s from '@/screens/editProfile/Edit.module.scss'
-import { EditFieldWithControl } from '@/screens/editProfile/edit.forms.interface'
+import s from '@/screens/edit-profile/Edit.module.scss'
+import { EditFieldWithControl } from '@/screens/edit-profile/edit.forms.interface'
 
 import Field from '@/ui/field/Field'
 
