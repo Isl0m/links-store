@@ -7,14 +7,17 @@ import { EditFieldWithControl } from '@/screens/editProfile/edit.forms.interface
 
 import { ITag } from '@/shared/types/profile.types'
 
+import { useTagForm } from './useTagForm'
+
 const DynamicSelect = dynamic(() => import('@/ui/select/SelectCreatable'), {
 	ssr: false,
 })
 
-const DetailForm: FC<EditFieldWithControl<ITag>> = ({ register, control }) => {
+const TagForm: FC<EditFieldWithControl<ITag>> = ({ control }) => {
+	const { tags } = useTagForm()
 	return (
 		<div className={s.form}>
-			<h4 className={s.title}>Tags Edit Fields</h4>
+			<h1>Tags Edit Fields</h1>
 			<div className={s.fields}>
 				<Controller
 					name="tags"
@@ -27,7 +30,7 @@ const DetailForm: FC<EditFieldWithControl<ITag>> = ({ register, control }) => {
 							error={error}
 							field={field}
 							placeholder="Tags"
-							defaultOptions={['IT', 'Sport']}
+							defaultOptions={tags}
 							isLoading={false}
 						/>
 					)}
@@ -37,4 +40,4 @@ const DetailForm: FC<EditFieldWithControl<ITag>> = ({ register, control }) => {
 	)
 }
 
-export default memo(DetailForm)
+export default memo(TagForm)

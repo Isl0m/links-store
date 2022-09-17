@@ -5,7 +5,7 @@
 		@apply container flex flex-wrap justify-between items-center mx-auto;
 
 		.title {
-			@apply self-center text-xl font-semibold whitespace-nowrap dark:text-white;
+			@apply self-center;
 		}
 		.menu {
 			@apply justify-between items-center w-full md:flex md:w-auto md:order-1;

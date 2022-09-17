@@ -12,11 +12,12 @@ import { IOption, ISelect } from './select.interface'
 const animatedComponents = makeAnimated()
 
 const Select: FC<ISelect> = ({
+	label,
 	placeholder,
 	error,
-	isCreatable = false,
-	label,
 	field,
+	defaultOptions,
+	isCreatable = false,
 	isLoading,
 }) => {
 	const [value, setValue] = useState<IOption[] | null>()
@@ -27,8 +28,13 @@ const Select: FC<ISelect> = ({
 			const values = (field.value as ITag[]).map(item =>
 				createOption(item.name)
 			)
+			if (defaultOptions) {
+				const createdOptions = (defaultOptions as string[]).map(item =>
+					createOption(item)
+				)
+				setOptions(createdOptions)
+			}
 			setValue(values)
-			setOptions(values)
 		}
 	}, [field.value, isLoading])
 

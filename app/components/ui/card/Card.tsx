@@ -14,7 +14,7 @@ interface ICard {
 const Card: FC<ICard> = ({ title, description, children, className }) => {
 	return (
 		<div className={cn(s.card, className)}>
-			<h5 className={s.title}>{title}</h5>
+			<h1>{title}</h1>
 			<span className={s.description}>
 				{description ? parse(description) : children}
 			</span>

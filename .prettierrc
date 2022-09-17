@@ -11,6 +11,7 @@
 		"^@/screens/(.*)$",
 		"^@/components/(.*)$",
 		"^@/ui/(.*)$",
+		"^@/templates/(.*)$",
 		"^@/hooks/(.*)$",
 		"^@/shared/(.*)$",
 		"^@/services/(.*)$",

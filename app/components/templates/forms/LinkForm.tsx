@@ -21,7 +21,7 @@ const LinkForm: FC<EditFieldWithControl<ILink>> = ({
 }) => {
 	return (
 		<div className={s.form}>
-			<h4 className={s.title}>Link Edit Fields</h4>
+			<h1>Link Edit Fields</h1>
 			<div className={s.fields}>
 				<Controller
 					name="link.avatar"

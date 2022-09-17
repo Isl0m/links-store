@@ -23,6 +23,7 @@ export interface ITag {
 }
 
 export interface IProfile {
+	_id: string
 	name: string
 	surname?: string
 	profession: string

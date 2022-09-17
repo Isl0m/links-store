@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import { FC } from 'react'
 
+import s from '@/screens/profile/Profile.module.scss'
+
 import Button from '@/ui/button/Button'
 import Card from '@/ui/card/Card'
 
 import { IDetail } from '@/shared/types/profile.types'
-
-import s from './Profile.module.scss'
 
 const ProfileDetail: FC<{ detail: IDetail }> = ({ detail }) => {
 	return (

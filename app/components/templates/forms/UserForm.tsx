@@ -12,7 +12,7 @@ import { IEmailPassword } from '@/store/user/user.interface'
 const UserForm: FC<EditFieldProps<IEmailPassword>> = ({ errors, register }) => {
 	return (
 		<div className={s.form}>
-			<h4 className={s.title}>User Edit Fields</h4>
+			<h1>User Edit Fields</h1>
 			<div className={s.fields}>
 				<Field
 					register={register}

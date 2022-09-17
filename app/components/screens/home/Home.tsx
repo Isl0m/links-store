@@ -8,7 +8,7 @@ const Home: FC = () => {
 			title="Home"
 			description="Links Store is a platform where you can save information about you self"
 		>
-			<div className="text-2xl text-gray-900 dark:text-gray-200">Home</div>
+			<h1>Home</h1>
 		</Meta>
 	)
 }
