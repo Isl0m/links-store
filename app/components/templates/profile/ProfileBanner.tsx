@@ -68,9 +68,11 @@ const ProfileBanner: FC<IProfileBannerProps> = ({
 					<ClipboardCopy copyText={copyProfileUrl(_id)} />
 					{isUser && (
 						<Link href="/profile/edit">
-							<Button icon="edit" className="mt-2">
-								<a>Edit Profile</a>
-							</Button>
+							<a>
+								<Button icon="edit" className="mt-2">
+									Edit Profile
+								</Button>
+							</a>
 						</Link>
 					)}
 				</div>

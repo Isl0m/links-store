@@ -1,7 +1,7 @@
 import { FC, memo } from 'react'
 
-import s from '@/screens/editProfile/Edit.module.scss'
-import { EditFieldProps } from '@/screens/editProfile/edit.forms.interface'
+import s from '@/screens/edit-profile/Edit.module.scss'
+import { EditFieldProps } from '@/screens/edit-profile/edit.forms.interface'
 
 import Field from '@/ui/field/Field'
 

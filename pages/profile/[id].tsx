@@ -13,7 +13,7 @@ const ProfilePage: NextPage<{ profile: IProfile }> = ({ profile }) => {
 export const getServerSideProps: GetServerSideProps = async context => {
 	const { id } = context.query
 	const { data: profile } = await ProfileService.getById(String(id))
-
+	await ProfileService.incCountOpened(profile._id)
 	return { props: { profile } }
 }
 

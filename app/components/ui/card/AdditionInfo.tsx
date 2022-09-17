@@ -2,7 +2,9 @@ import { FC } from 'react'
 
 import { IDetail, ITag } from '@/shared/types/profile.types'
 
-import Card from './Card'
+import Tag from '../tag/Tag'
+
+import InfoCard from './InfoCard'
 
 interface AdditionInfoProps {
 	detail: IDetail
@@ -12,7 +14,7 @@ interface AdditionInfoProps {
 const AdditionInfo: FC<AdditionInfoProps> = ({ tags, detail }) => {
 	const { age, gender, country, city, birthDay } = detail
 	return (
-		<Card title="Additional Info">
+		<InfoCard title="Additional Info">
 			Age: {age} <br />
 			Gender: {gender}
 			<br />
@@ -27,19 +29,10 @@ const AdditionInfo: FC<AdditionInfoProps> = ({ tags, detail }) => {
 			{tags && (
 				<div>
 					Tags:
-					<div className="flex justify-center flex-wrap gap-1 mt-1">
-						{tags.map(item => (
-							<span
-								className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"
-								key={item?.name}
-							>
-								# {item?.name}
-							</span>
-						))}
-					</div>
+					<Tag tags={tags} />
 				</div>
 			)}
-		</Card>
+		</InfoCard>
 	)
 }
 

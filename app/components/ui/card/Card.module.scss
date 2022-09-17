@@ -1,7 +1,29 @@
-.card {
+.infoCard {
 	@apply block p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700;
-
+	h1 {
+		@apply mb-2;
+	}
 	.description {
-		@apply font-normal text-gray-700 dark:text-gray-400 mt-2;
+		@apply font-normal text-gray-700 dark:text-gray-400;
+	}
+}
+.card {
+	@apply max-w-sm bg-white rounded-lg border border-gray-200 shadow-md 
+	dark:bg-gray-800 dark:border-gray-700 
+	cursor-pointer hover:-translate-y-2 transition-transform ease-in-out;
+	min-width: 20%;
+
+	.image {
+		@apply relative overflow-hidden w-full h-32 rounded-t-lg;
+	}
+
+	.avatar {
+		@apply relative overflow-hidden mx-auto -mt-12 w-24 h-24 rounded-full border-4 border-white;
+	}
+	.info {
+		@apply p-4 pt-2 text-center;
+		.profession {
+			@apply mb-3 font-normal text-gray-700 dark:text-gray-400;
+		}
 	}
 }
