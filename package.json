@@ -35,7 +35,8 @@
 		"react-social-icons": "^5.14.0",
 		"react-toastify": "^9.0.8",
 		"sass": "^1.54.7",
-		"string-strip-html": "^11.6.3"
+		"string-strip-html": "^11.6.3",
+		"swiper": "^8.4.2"
 	},
 	"devDependencies": {
 		"@trivago/prettier-plugin-sort-imports": "^3.3.0",

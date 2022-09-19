@@ -10,7 +10,7 @@
 .card {
 	@apply max-w-sm bg-white rounded-lg border border-gray-200 shadow-md 
 	dark:bg-gray-800 dark:border-gray-700 
-	cursor-pointer hover:-translate-y-2 transition-transform ease-in-out;
+	cursor-pointer hover:bg-gray-100 dark:only:hover:bg-gray-600 transition-colors	 ease-in-out;
 	min-width: 20%;
 
 	.image {

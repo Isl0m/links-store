@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import { FC } from 'react'
+import 'swiper/css'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 import Card from '@/ui/card/Card'
 import InfoCard from '@/ui/card/InfoCard'
@@ -18,35 +20,39 @@ const Home: FC<HomeProps> = ({ profiles, tags }) => {
 			description="Links Store is a platform where you can save information about you self"
 		>
 			<div className={s.home}>
-				<h1>Most Popular Profiles</h1>
-				<div className={s.popularProfiles}>
+				<h1 className="mb-4">Most Popular Profiles</h1>
+				<Swiper slidesPerView="auto" spaceBetween={16}>
 					{profiles &&
 						profiles.map(item => (
-							<Card
-								_id={item._id}
-								avatar={item.link.avatar}
-								background={item.link.background}
-								name={item.name}
-								profession={item.profession}
-								surname={item.surname}
-								tags={item.tags}
-								key={item._id}
-							/>
+							<SwiperSlide key={item._id}>
+								<Card
+									_id={item._id}
+									avatar={item.link.avatar}
+									background={item.link.background}
+									name={item.name}
+									profession={item.profession}
+									surname={item.surname}
+									tags={item.tags}
+								/>
+							</SwiperSlide>
 						))}
-				</div>
-				<h1 className="mt-4">Most Popular Tags</h1>
-				<div className={s.popularTags}>
+				</Swiper>
+				<h1 className="my-4">Most Popular Tags</h1>
+
+				<Swiper slidesPerView="auto" spaceBetween={16}>
 					{tags &&
-						tags.slice(0, 5).map(item => (
-							<Link href={getTagUrl(item.name)} key={item.name}>
-								<a>
-									<InfoCard title={item.name} className="w-32">
-										Used in {item.profiles.length} profiles
-									</InfoCard>
-								</a>
-							</Link>
+						tags.map(item => (
+							<SwiperSlide key={item.name}>
+								<Link href={getTagUrl(item.name)}>
+									<a>
+										<InfoCard title={item.name} className="w-32">
+											Used in {item.profiles.length} profiles
+										</InfoCard>
+									</a>
+								</Link>
+							</SwiperSlide>
 						))}
-				</div>
+				</Swiper>
 			</div>
 		</Meta>
 	)

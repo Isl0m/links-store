@@ -2,6 +2,7 @@ import 'material-icons/iconfont/material-icons.css'
 import type { AppProps } from 'next/app'
 import MainProvider from 'providers/Provider'
 import 'react-toastify/dist/ReactToastify.css'
+import 'swiper/css/bundle'
 
 import { TypeComponentAuthFields } from '@/shared/types/auth.types'
 
