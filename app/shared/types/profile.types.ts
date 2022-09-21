@@ -22,6 +22,11 @@ export interface ITag {
 	profiles: string[]
 }
 
+export interface ITagPopulated {
+	name: string
+	profiles: IProfile[]
+}
+
 export interface IProfile {
 	_id: string
 	name: string

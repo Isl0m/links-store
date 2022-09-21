@@ -45,7 +45,10 @@ const Home: FC<HomeProps> = ({ profiles, tags }) => {
 							<SwiperSlide key={item.name}>
 								<Link href={getTagUrl(item.name)}>
 									<a>
-										<InfoCard title={item.name} className="w-32">
+										<InfoCard
+											title={item.name}
+											className="w-32 !border-blue-300 hover:!border-blue-500"
+										>
 											Used in {item.profiles.length} profiles
 										</InfoCard>
 									</a>
