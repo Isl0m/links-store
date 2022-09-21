@@ -38,7 +38,7 @@ const Layout: FC = () => {
 					<Navigation
 						items={[
 							{ name: 'Home', link: '/' },
-							{ name: 'Services', link: '/services' },
+							{ name: 'Tag', link: '/tag' },
 							{ name: 'Profile', link: '/profile' },
 							{ name: 'Auth', link: '/auth' },
 						]}

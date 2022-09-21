@@ -17,7 +17,7 @@ interface CardProps {
 	name: string
 	surname?: string
 	profession: string
-	tags: ITag[]
+	tags: ITag[] | false
 }
 
 const Card: FC<CardProps> = ({
@@ -58,7 +58,7 @@ const Card: FC<CardProps> = ({
 							{name} {surname}
 						</h2>
 						<p className={s.profession}>{profession}</p>
-						<Tag tags={tags.slice(0, 3)} />
+						{tags && <Tag tags={tags.slice(0, 3)} />}
 					</div>
 				</div>
 			</a>

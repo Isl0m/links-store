@@ -1,0 +1,15 @@
+.wrapper {
+	@apply container my-4 w-4/5 mx-auto;
+
+	> h3 {
+		@apply text-gray-700 dark:text-gray-300;
+	}
+
+	.profiles {
+		@apply grid grid-cols-5 gap-4 mt-4;
+	}
+
+  .tags {
+		@apply grid grid-cols-7 gap-4 mt-4;
+	}
+}
