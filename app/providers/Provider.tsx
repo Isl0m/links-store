@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { FC, PropsWithChildren } from 'react'
+import { FC } from 'react'
 import { Provider } from 'react-redux'
 import { ToastContainer } from 'react-toastify'
 

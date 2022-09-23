@@ -1,0 +1,9 @@
+.wrapper {
+	@apply container my-4 w-4/5 mx-auto;
+	h1 {
+		@apply mb-4;
+	}
+	.profiles {
+		@apply flex flex-wrap gap-4 mt-4;
+	}
+}

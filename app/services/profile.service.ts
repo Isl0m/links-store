@@ -7,6 +7,11 @@ import { IProfile } from '@/shared/types/profile.types'
 import { getProfileApi } from '@/configs/api.config'
 
 export const ProfileService = {
+	async getAll(searchTerm: String) {
+		return axiosClassic.get<IProfile[]>(getProfileApi(''), {
+			params: searchTerm ? { searchTerm } : {},
+		})
+	},
 	async getMostPopular() {
 		return axiosClassic.post<IProfile[]>(getProfileApi('/most-popular'))
 	},

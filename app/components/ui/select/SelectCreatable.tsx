@@ -24,19 +24,20 @@ const Select: FC<ISelect> = ({
 	const [options, setOptions] = useState<IOption[]>()
 
 	useEffect(() => {
-		if (field.value && !value && !options) {
+		if (field.value && !value ) {
 			const values = (field.value as ITag[]).map(item =>
 				createOption(item.name)
 			)
-			if (defaultOptions) {
+			
+			setValue(values)
+		}
+    if (defaultOptions && !options) {
 				const createdOptions = (defaultOptions as string[]).map(item =>
 					createOption(item)
 				)
 				setOptions(createdOptions)
 			}
-			setValue(values)
-		}
-	}, [field.value, isLoading])
+	}, [field.value, defaultOptions])
 
 	const handleChange = (
 		newValue: OnChangeValue<IOption, true>,
