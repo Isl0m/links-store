@@ -1,22 +1,23 @@
 .wrapper {
-	@apply container w-2/3 h-full mx-auto my-4 animate-pulse;
+	@apply container md:w-2/3 w-4/5 h-full mx-auto my-4 animate-pulse;
 	.imgBanner {
 		@apply flex justify-center items-center w-full h-44 rounded-t-lg bg-gray-300 dark:bg-gray-700;
 	}
 	.details {
-		@apply flex justify-between mt-2 mx-12;
+		@apply flex justify-between mt-2 md:mx-8 mx-4;
 		.left {
 			@apply flex items-center;
 			.avatar {
-				@apply flex justify-center items-center  -mt-16 w-32 h-32 bg-gray-300 dark:bg-gray-700 rounded-full border border-gray-200;
+				@apply flex justify-center items-center md:-mt-16 md:w-32 md:h-32 -mt-12 w-24 h-24 
+				bg-gray-300 dark:bg-gray-700 rounded-full border border-gray-200;
 			}
 			.textBlock {
 				@apply ml-2;
 				.title {
-					@apply w-48 h-4 mb-2 bg-gray-200 rounded-full dark:bg-gray-700;
+					@apply md:w-48 w-36 h-4 mb-2 bg-gray-200 rounded-full dark:bg-gray-700;
 				}
 				.description {
-					@apply h-4 bg-gray-200 rounded-full dark:bg-gray-700 w-32;
+					@apply h-4 bg-gray-200 rounded-full dark:bg-gray-700 md:w-32 w-28;
 				}
 			}
 			.button {
