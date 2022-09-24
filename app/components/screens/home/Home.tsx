@@ -23,7 +23,7 @@ const Home: FC<HomeProps> = ({ profiles, tags }) => {
 				<h1 className="mb-4">Most Popular Profiles</h1>
 				<Swiper slidesPerView="auto" spaceBetween={16}>
 					{profiles &&
-						profiles.map(item => (
+						profiles.slice(0,9).map(item => (
 							<SwiperSlide key={item._id}>
 								<Card
 									_id={item._id}
@@ -41,7 +41,7 @@ const Home: FC<HomeProps> = ({ profiles, tags }) => {
 
 				<Swiper slidesPerView="auto" spaceBetween={16}>
 					{tags &&
-						tags.map(item => (
+						tags.slice(0,12).map(item => (
 							<SwiperSlide key={item.name}>
 								<Link href={getTagUrl(item.name)}>
 									<a>

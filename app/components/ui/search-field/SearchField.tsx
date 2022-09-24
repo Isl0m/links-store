@@ -1,18 +1,34 @@
 import cn from 'classnames'
-import { FC } from 'react'
+import { ChangeEvent, FC, memo } from 'react'
 
 import s from './SearchField.module.scss'
 
-const SearchField: FC<{ className: string }> = ({ className }) => {
+interface ISearchField {
+	searchTerm: string
+	handleSearch: (event: ChangeEvent<HTMLInputElement>) => void
+	classNames?: string
+}
+
+const SearchField: FC<ISearchField> = ({
+	searchTerm,
+	handleSearch,
+	classNames,
+}) => {
 	return (
-		<div className={cn(s.search, className)}>
+		<div className={cn(s.search, classNames)}>
 			<div className={s.icon}>
 				<span className="material-icons-outlined">search</span>
 				<span className="sr-only">Search icon</span>
 			</div>
-			<input type="text" className={s.field} placeholder="Search..." />
+			<input
+				type="text"
+				className={s.field}
+				value={searchTerm}
+				onChange={handleSearch}
+				placeholder="Search..."
+			/>
 		</div>
 	)
 }
 
-export default SearchField
+export default memo(SearchField)

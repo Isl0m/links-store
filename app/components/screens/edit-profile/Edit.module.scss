@@ -1,11 +1,11 @@
 .wrapper {
-	@apply container w-fit h-full mx-auto my-8;
+	@apply container w-fit h-full mx-auto my-8 md:px-0 px-4;
 }
 
 .form {
 	@apply mb-8;
 
 	.fields {
-		@apply grid grid-cols-3 gap-8 mt-4;
+		@apply grid md:grid-cols-3 grid-cols-1 gap-8 mt-4;
 	}
 }
