@@ -5,5 +5,8 @@
 	}
 	.profiles {
 		@apply flex flex-wrap gap-4 mt-4;
+		a {
+			@apply basis-64;
+		}
 	}
 }
