@@ -30,7 +30,11 @@ const Profile: FC<ProfileProps> = ({ profile, isUser = false }) => {
 	const { _id, name, surname, profession, link, detail, tags } = profile
 
 	return (
-		<Meta title="Profile" image={link.avatar}>
+		<Meta
+			title="Profile"
+			description={`${name} ${surname} Profile`}
+			image={link.avatar}
+		>
 			<div className={s.profileContainer}>
 				<ProfileBanner
 					_id={_id}
