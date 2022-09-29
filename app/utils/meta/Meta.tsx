@@ -36,7 +36,7 @@ const Meta: FC<ISeo> = ({ title, description, image, children }) => {
 					<meta property="og:locale" content="en" />
 					<meta
 						property="og:image"
-						content={image || '/favicons/apple-touch-icon-72x72.png'}
+						content={siteName+image || '/favicons/apple-touch-icon-72x72.png'}
 					/>
 
 					{/* <!-- Twitter --> */}
@@ -49,7 +49,7 @@ const Meta: FC<ISeo> = ({ title, description, image, children }) => {
 					/>
 					<meta
 						property="twitter:image"
-						content={image || '/favicons/apple-touch-icon-72x72.png'}
+						content={siteName+image || '/favicons/apple-touch-icon-72x72.png'}
 					/>
 
 					<link rel="canonical" href={currentUrl} />
