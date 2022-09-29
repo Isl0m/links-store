@@ -13,11 +13,11 @@ poweredByHeader: false,
 		return [
 			{
 				source: '/api/:path*',
-				destination: `http://localhost:4200/:path*`,
+				destination: `https://links-store-api.herokuapp.com//:path*`,
 			},
 			{
 				source: '/uploads/:path*',
-				destination: `http://localhost:4200/uploads/:path*`,
+				destination: `https://links-store-api.herokuapp.com//uploads/:path*`,
 			},
 		]
 	},
