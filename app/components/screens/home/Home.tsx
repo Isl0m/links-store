@@ -23,12 +23,12 @@ const Home: FC<HomeProps> = ({ profiles, tags }) => {
 				<h1 className="mb-4">Most Popular Profiles</h1>
 				<Swiper slidesPerView="auto" spaceBetween={16}>
 					{profiles &&
-						profiles.slice(0,9).map(item => (
+						profiles.slice(0, 9).map(item => (
 							<SwiperSlide key={item._id}>
 								<Card
 									_id={item._id}
-									avatar={item.link.avatar}
-									background={item.link.background}
+									avatar={item.link.avatar || '/avatar.png'}
+									background={item.link.background || '/uploads/bg/default.jpg'}
 									name={item.name}
 									profession={item.profession}
 									surname={item.surname}
@@ -41,7 +41,7 @@ const Home: FC<HomeProps> = ({ profiles, tags }) => {
 
 				<Swiper slidesPerView="auto" spaceBetween={16}>
 					{tags &&
-						tags.slice(0,12).map(item => (
+						tags.slice(0, 12).map(item => (
 							<SwiperSlide key={item.name}>
 								<Link href={getTagUrl(item.name)}>
 									<a>

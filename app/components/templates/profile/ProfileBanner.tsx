@@ -32,7 +32,7 @@ const ProfileBanner: FC<IProfileBannerProps> = ({
 		<>
 			<div className={s.banner}>
 				<Image
-					src={link?.background || '/uploads/bg/default.png'}
+					src={link?.background || '/uploads/bg/default.jpg'}
 					className="image-like-bg object-top"
 					layout="fill"
 					draggable={false}
