@@ -22,8 +22,8 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({
 	_id,
-	avatar,
-	background,
+	avatar = '/avatar.png',
+	background = '/uploads/bg/default.jpg',
 	name,
 	surname,
 	profession,

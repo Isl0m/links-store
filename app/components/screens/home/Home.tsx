@@ -27,8 +27,8 @@ const Home: FC<HomeProps> = ({ profiles, tags }) => {
 							<SwiperSlide key={item._id}>
 								<Card
 									_id={item._id}
-									avatar={item.link.avatar || '/avatar.png'}
-									background={item.link.background || '/uploads/bg/default.jpg'}
+									avatar={item.link.avatar}
+									background={item.link.background}
 									name={item.name}
 									profession={item.profession}
 									surname={item.surname}
