@@ -38,7 +38,6 @@ const SelectMultiInput: FC<ISelectInput> = ({
 		switch (event.key) {
 			case 'Enter':
 			case 'Tab':
-			case 'Space':
 				const newValue = value
 					? [createOption(inputValue), ...value]
 					: [createOption(inputValue)]

@@ -11,7 +11,7 @@
 	@apply max-w-sm bg-white rounded-lg border border-gray-200 shadow-md 
 	dark:bg-gray-800 dark:border-gray-700 
 	cursor-pointer hover:bg-gray-100 dark:only:hover:bg-gray-600 transition-colors	 ease-in-out;
-	min-width: 20%;
+	min-width: 16rem !important;
 
 	.image {
 		@apply relative overflow-hidden w-full h-32 rounded-t-lg;

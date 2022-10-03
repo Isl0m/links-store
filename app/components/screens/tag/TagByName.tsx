@@ -17,8 +17,8 @@ const TagByName: FC<{ tag: ITagPopulated }> = ({ tag }) => {
 						<Card
 							key={item._id}
 							_id={item._id}
-							avatar={item.link.avatar}
-							background={item.link.background}
+							avatar={item.link?.avatar}
+							background={item.link?.background}
 							name={item.name}
 							profession={item.profession}
 							surname={item.surname}

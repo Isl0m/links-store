@@ -27,8 +27,8 @@ const Home: FC<HomeProps> = ({ profiles, tags }) => {
 							<SwiperSlide key={item._id}>
 								<Card
 									_id={item._id}
-									avatar={item.link.avatar}
-									background={item.link.background}
+									avatar={item.link?.avatar}
+									background={item.link?.background}
 									name={item.name}
 									profession={item.profession}
 									surname={item.surname}
@@ -47,7 +47,7 @@ const Home: FC<HomeProps> = ({ profiles, tags }) => {
 									<a>
 										<InfoCard
 											title={item.name}
-											className="w-32 !border-blue-300 hover:!border-blue-500"
+											className="max-w-xs !border-blue-300 hover:!border-blue-500"
 										>
 											Used in {item.profiles.length} profiles
 										</InfoCard>

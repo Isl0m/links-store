@@ -23,7 +23,7 @@ const Tag: FC<{ tags: ITag[] }> = ({ tags }) => {
 								<a>
 									<InfoCard
 										title={item.name}
-										className="w-32 !border-blue-300 hover:!border-blue-500"
+										className="max-w-xs !border-blue-300 hover:!border-blue-500"
 									>
 										Used in {item.profiles.length} profiles
 									</InfoCard>
