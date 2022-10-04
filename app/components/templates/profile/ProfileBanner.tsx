@@ -6,6 +6,7 @@ import s from '@/screens/profile/Profile.module.scss'
 
 import Button from '@/ui/button/Button'
 import ClipboardCopy from '@/ui/copy-to-clipboard/ClipboardCopy'
+import LogoutButton from '@/ui/logout-button/LogoutButton'
 
 import { ILink } from '@/shared/types/profile.types'
 
@@ -75,6 +76,7 @@ const ProfileBanner: FC<IProfileBannerProps> = ({
 							</a>
 						</Link>
 					)}
+					<LogoutButton />
 				</div>
 			</div>
 		</>
