@@ -51,6 +51,7 @@ const Card: FC<CardProps> = ({
 								layout="fill"
 								draggable={false}
 								alt="Card Avatar"
+priority 
 							/>
 						</div>
 					)}
