@@ -40,7 +40,7 @@ const Card: FC<CardProps> = ({
 							layout="fill"
 							draggable={false}
 							alt="Card Background"
-                                                       
+							priority
 						/>
 					</div>
 					{avatar && (
