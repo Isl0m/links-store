@@ -41,7 +41,6 @@ const Card: FC<CardProps> = ({
 							draggable={false}
 							alt="Card Background"
 							priority
-							unoptimized
 						/>
 					</div>
 					{avatar && (
