@@ -5,14 +5,14 @@ import { useForm } from 'react-hook-form'
 import Button from '@/ui/button/Button'
 import SkeletonEdit from '@/ui/skeleton/SkeletonEdit'
 
-import s from './Edit.module.scss'
-import { EditProfile } from './edit.forms.interface'
-import { useFormEdit } from './useFormEdit'
 import DetailForm from '@/templates/forms/DetailForm'
 import LinkForm from '@/templates/forms/LinkForm'
 import ProfileForm from '@/templates/forms/ProfileForm'
 import TagForm from '@/templates/forms/TagForm'
-import UserForm from '@/templates/forms/UserForm'
+
+import s from './Edit.module.scss'
+import { EditProfile } from './edit.forms.interface'
+import { useFormEdit } from './useFormEdit'
 
 const Edit: FC = () => {
 	const {
@@ -32,7 +32,6 @@ const Edit: FC = () => {
 		<>
 			<div className={s.wrapper}>
 				<form onSubmit={handleSubmit(onSubmit)}>
-					<UserForm errors={errors.user} register={register} />
 					<ProfileForm errors={errors.profile} register={register} />
 					<LinkForm
 						control={control}
