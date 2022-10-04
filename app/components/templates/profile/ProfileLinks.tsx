@@ -8,7 +8,7 @@ import { ILink } from '@/shared/types/profile.types'
 const ProfileLinks: FC<{ link: ILink }> = ({ link }) => {
 	return (
 		<>
-			{link?.social.length ? (
+			{link?.social?.length ? (
 				<div className={s.social}>
 					<h2>Social Links</h2>
 					<div className={s.links}>

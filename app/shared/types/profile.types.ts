@@ -10,7 +10,7 @@ export interface IDetail {
 }
 
 export interface ILink {
-	social: string[]
+	social?: string[]
 	background: string
 	portfolio?: string[]
 	avatar?: string

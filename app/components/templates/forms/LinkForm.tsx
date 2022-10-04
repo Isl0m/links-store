@@ -84,9 +84,6 @@ const LinkForm: FC<EditFieldWithControl<ILink>> = ({
 				<Controller
 					name="link.social"
 					control={control}
-					rules={{
-						required: 'Social links required',
-					}}
 					render={({ field, fieldState: { error } }) => (
 						<DynamicSelect
 							error={error}
