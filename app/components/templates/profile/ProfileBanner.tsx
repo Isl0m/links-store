@@ -76,7 +76,7 @@ const ProfileBanner: FC<IProfileBannerProps> = ({
 							</a>
 						</Link>
 					)}
-					<LogoutButton />
+					{isUser && <LogoutButton />}
 				</div>
 			</div>
 		</>
