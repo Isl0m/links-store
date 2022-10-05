@@ -35,22 +35,23 @@ const Card: FC<CardProps> = ({
 				<div className={s.card}>
 					<div className={s.image}>
 						<Image
-							src={background || '/uploads/bg/default.png'}
+							src={background}
 							className="image-like-bg object-top"
 							layout="fill"
 							draggable={false}
 							alt="Card Background"
-							priority
+							unoptimized
 						/>
 					</div>
 					{avatar && (
 						<div className={s.avatar}>
 							<Image
-								src={avatar || '/avatar.png'}
+								src={avatar}
 								className="image-like-bg"
 								layout="fill"
 								draggable={false}
 								alt="Card Avatar"
+								unoptimized
 							/>
 						</div>
 					)}
