@@ -40,7 +40,7 @@ const Card: FC<CardProps> = ({
 							layout="fill"
 							draggable={false}
 							alt="Card Background"
-							unoptimized
+							priority
 						/>
 					</div>
 					{avatar && (
@@ -51,7 +51,7 @@ const Card: FC<CardProps> = ({
 								layout="fill"
 								draggable={false}
 								alt="Card Avatar"
-								unoptimized
+								priority
 							/>
 						</div>
 					)}
@@ -60,7 +60,7 @@ const Card: FC<CardProps> = ({
 							{name} {surname}
 						</h2>
 						<p className={s.profession}>{profession}</p>
-						{tags && <Tag tags={tags.slice(0, 3)} />}
+						{tags && <Tag tags={tags.slice(0, 2)} />}
 					</div>
 				</div>
 			</a>

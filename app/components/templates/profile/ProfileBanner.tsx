@@ -38,7 +38,7 @@ const ProfileBanner: FC<IProfileBannerProps> = ({
 					layout="fill"
 					draggable={false}
 					alt="Profile Background"
-					unoptimized
+					priority
 				/>
 			</div>
 			<div className={s.controls}>
@@ -50,7 +50,7 @@ const ProfileBanner: FC<IProfileBannerProps> = ({
 							layout="fill"
 							draggable={false}
 							alt="Profile Avatar"
-							unoptimized
+							priority
 						/>
 					</div>
 					<div className={s.info}>
