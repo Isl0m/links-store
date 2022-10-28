@@ -31,7 +31,7 @@ export const AuthService = {
 		const res = await axiosClassic.post<IAuthResponse>(getAuthApi('/login'), {
 			email,
 			password,
-		})
+		},{headers:{"Access-Control-Allow-Origin":"*"}})
 		if (res.data.accessToken) {
 			saveToStorage(res.data)
 		}
