@@ -13,11 +13,11 @@ poweredByHeader: false,
 		return [
 			{
 				source: '/api/:path*',
-				destination: `https://links-store-api.herokuapp.com/:path*`,
+				destination: `https://links-store-api.vercel.app/:path*`,
 			},
 			{
 				source: '/uploads/:path*',
-				destination: `https://links-store-api.herokuapp.com/uploads/:path*`,
+				destination: `https://links-store-api.vercel.app/uploads/:path*`,
 			},
 		]
 	},
