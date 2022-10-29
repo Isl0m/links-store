@@ -1,4 +1,4 @@
-import axios, { axiosClassic, axiosFast } from 'api/interceptors'
+import axios, { axiosClassic} from 'api/interceptors'
 
 import { EditProfile } from '@/screens/edit-profile/edit.forms.interface'
 
@@ -13,7 +13,7 @@ export const ProfileService = {
 		})
 	},
 	async getMostPopular() {
-		return axiosFast.post<IProfile[]>(getProfileApi('/most-popular'))
+		return axiosClassic.post<IProfile[]>(getProfileApi('/most-popular'))
 	},
 	async getById(id: string) {
 		return axiosClassic.get<IProfile>(getProfileApi(`/${id}`))
