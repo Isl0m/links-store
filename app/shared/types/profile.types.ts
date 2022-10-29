@@ -11,7 +11,7 @@ export interface IDetail {
 
 export interface ILink {
 	social?: string[]
-	background?: string
+	background: string
 	portfolio?: string[]
 	avatar?: string
 	CV?: string
