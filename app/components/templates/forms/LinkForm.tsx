@@ -39,9 +39,6 @@ const LinkForm: FC<EditFieldWithControl<ILink>> = ({
 				<Controller
 					name="link.background"
 					control={control}
-					rules={{
-						required: 'Background image required',
-					}}
 					render={({ field: { value, onChange }, fieldState: { error } }) => (
 						<FileInput
 							placeholder="Upload background"

@@ -4,10 +4,16 @@ import Cookies from 'js-cookie'
 import { removeTokensFromStorage } from '@/services/auth/auth.helper'
 import { AuthService } from '@/services/auth/auth.service'
 
-import { API_SERVER_URL, API_URL } from '@/configs/api.config'
+import { API_SERVER_URL, API_URL, APP_FAST_SERVER_URL } from '@/configs/api.config'
 import { IS_PRODUCTION } from '@/configs/constants'
 
 import { errorCatch, getContentType } from './api.helpers'
+
+
+export const axiosFast = axios.create({
+	baseURL: APP_FAST_SERVER_URL, 
+	headers: getContentType(),
+})
 
 export const axiosClassic = axios.create({
 	baseURL: IS_PRODUCTION ? API_SERVER_URL : API_URL,
