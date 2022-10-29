@@ -28,7 +28,7 @@ export const AuthService = {
 		return res
 	},
 	async login(email: string, password: string) {
-		const res = await axiosClassic.post<IAuthResponse>('/login', {
+		const res = await axiosClassic.post<IAuthResponse>(getAuthApi('/login'), {
 			email,
 			password,
 		})
