@@ -18,7 +18,7 @@ const nextConfig = {
 			},
 			{
 				source: '/uploads/:path*',
-				destination: `https://links-store-api.herokuapp.com/:path*`,
+				destination: `https://links-store-api.herokuapp.com/uploads/:path*`,
 			},
 		]
 	},
