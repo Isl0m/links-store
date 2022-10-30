@@ -11,7 +11,6 @@ import LogoutButton from '@/ui/logout-button/LogoutButton'
 import { ILink } from '@/shared/types/profile.types'
 
 import { copyProfileUrl } from '@/configs/url.config'
-import { getImageFullUrl } from '@/utils/get-image-url'
 
 interface IProfileBannerProps {
 	_id: string
@@ -34,7 +33,7 @@ const ProfileBanner: FC<IProfileBannerProps> = ({
 		<>
 			<div className={s.banner}>
 				<Image
-					src={getImageFullUrl(link?.background) || '/bg.jpg'}
+					src={link?.background || '/bg.jpg'}
 					className="image-like-bg object-top"
 					layout="fill"
 					draggable={false}
@@ -46,7 +45,7 @@ const ProfileBanner: FC<IProfileBannerProps> = ({
 				<div className={s.avatarAndInfo}>
 					<div className={s.avatar}>
 						<Image
-							src={getImageFullUrl(link?.avatar) || '/avatar.png'}
+							src={link?.avatar || '/avatar.png'}
 							className="image-like-bg"
 							layout="fill"
 							draggable={false}
