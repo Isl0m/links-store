@@ -9,6 +9,7 @@ import { ITag } from '@/shared/types/profile.types'
 import { getProfileUrl } from '@/configs/url.config'
 
 import s from './Card.module.scss'
+import { getImageFullUrl } from '@/utils/get-image-url'
 
 interface CardProps {
 	_id: string
@@ -22,8 +23,8 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({
 	_id,
-	avatar = '/avatar.png',
-	background = '/bg.jpg',
+	avatar,
+	background ,
 	name,
 	surname,
 	profession,
@@ -35,7 +36,7 @@ const Card: FC<CardProps> = ({
 				<div className={s.card}>
 					<div className={s.image}>
 						<Image
-							src={background}
+							src={getImageFullUrl(background) || '/bg.jpg'}
 							className="image-like-bg object-top"
 							layout="fill"
 							draggable={false}
@@ -46,7 +47,7 @@ const Card: FC<CardProps> = ({
 					{avatar && (
 						<div className={s.avatar}>
 							<Image
-								src={avatar}
+								src={getImageFullUrl(avatar) ||'/avatar.png'}
 								className="image-like-bg"
 								layout="fill"
 								draggable={false}
