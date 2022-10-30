@@ -1,0 +1,13 @@
+.feature{
+ @apply flex items-center gap-4 ;
+
+ .icon{
+   @apply dark:bg-blue-700 bg-blue-500  p-2 rounded-md inline-flex items-center justify-center;
+   span{
+     @apply text-white text-4xl;
+   }
+ }
+ h4{
+   @apply text-xl;
+ }
+}

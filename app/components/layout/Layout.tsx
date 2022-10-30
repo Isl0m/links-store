@@ -2,8 +2,6 @@ import cn from 'classnames'
 import Image from 'next/image'
 import { FC, useState } from 'react'
 
-import SearchField from '@/ui/search-field/SearchField'
-
 import s from './Layout.module.scss'
 import Navigation from './Navigation'
 
@@ -34,6 +32,7 @@ const Layout: FC = () => {
 						onClick={toggleOpen}
 						items={[
 							{ name: 'Home', link: '/' },
+              { name: 'Explore', link: '/explore' },
 							{ name: 'Search', link: '/search' },
 							{ name: 'Tag', link: '/tag' },
 							{ name: 'Profile', link: '/profile' },

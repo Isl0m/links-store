@@ -1,6 +1,6 @@
 import { IProfile, ITag } from '@/shared/types/profile.types'
 
-export interface HomeProps {
+export interface ExploreProps {
 	profiles: IProfile[]
 	tags: ITag[]
 }

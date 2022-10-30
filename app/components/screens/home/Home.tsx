@@ -1,61 +1,62 @@
-import Link from 'next/link'
+import Image from 'next/image'
 import { FC } from 'react'
-import 'swiper/css'
-import { Swiper, SwiperSlide } from 'swiper/react'
-
-import Card from '@/ui/card/Card'
-import InfoCard from '@/ui/card/InfoCard'
 
 import Meta from '@/utils/meta/Meta'
 
-import { getTagUrl } from '@/configs/url.config'
-
 import s from './Home.module.scss'
-import { HomeProps } from './home.interface'
+import { features } from 'process'
+import Feature from '@/ui/feature/Feature'
+import Button from '@/ui/button/Button'
+import Link from 'next/link'
 
-const Home: FC<HomeProps> = ({ profiles, tags }) => {
+const featuresList = [
+  {
+      icon:'link',
+      text:'Save portfolio and social links'
+    },
+     {
+      icon:'feed',
+      text:'Add your biography'
+    },
+    {
+      icon:'ios_share',
+      text:'Share in one click'
+    },
+    {
+      icon:'picture_as_pdf',
+      text:'Add your Resume or CV'
+    },
+]
+
+const Home: FC = () => {
 	return (
 		<Meta
 			title="Home"
 			description="Links Store is a platform where you can save information about you self"
 		>
 			<div className={s.home}>
-				<h1 className="mb-4">Most Popular Profiles</h1>
-				<Swiper slidesPerView="auto" spaceBetween={16}>
-					{profiles &&
-						profiles.slice(0, 9).map(item => (
-							<SwiperSlide key={item._id}>
-								<Card
-									_id={item._id}
-									avatar={item.link?.avatar}
-									background={item.link?.background}
-									name={item.name}
-									profession={item.profession}
-									surname={item.surname}
-									tags={item.tags}
-								/>
-							</SwiperSlide>
-						))}
-				</Swiper>
-				<h1 className="my-4">Most Popular Tags</h1>
-
-				<Swiper slidesPerView="auto" spaceBetween={16}>
-					{tags &&
-						tags.slice(0, 12).map(item => (
-							<SwiperSlide key={item.name}>
-								<Link href={getTagUrl(item.name)}>
-									<a>
-										<InfoCard
-											title={item.name}
-											className="max-w-xs !border-blue-300 hover:!border-blue-500"
-										>
-											Used in {item.profiles.length} profiles
-										</InfoCard>
-									</a>
-								</Link>
-							</SwiperSlide>
-						))}
-				</Swiper>
+				<article className={s.hero}>
+					<Image width={400} height={400} alt="logo" src="/logo.svg" />
+					<div className={s.info}>
+						<h1>Links Store</h1>
+						<p>
+							Is a platform where you can save your useful links or information
+							about yourself than share.
+						</p>
+            <Link href='/explore'>
+            <a>
+            <Button className="mt-4" >Get Started</Button>
+            </a>
+            </Link>
+					</div>
+				</article>
+        <hr />
+        <article className={s.features}>
+          <h1>Features</h1>
+          <ul>
+          {featuresList.map(item => (<Feature {...item} key={item.icon} />))}
+          </ul>
+        </article>
 			</div>
 		</Meta>
 	)
